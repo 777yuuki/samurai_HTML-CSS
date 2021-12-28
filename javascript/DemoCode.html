@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9章　問題　サンプルコード</title>
+</head>
+<body>
+
+    <form name = "myForm">
+       名前： <input type="text" name="myText"/><br/>
+       
+       メールアドレス：<input type="text" name="myText2"/><br/>
+       
+       年齢：<input type="radio" name="age" value="20"/>20代
+             <input type="radio" name="age" value="30"/>30代
+             <input type="radio" name="age" value="40"/>40代
+             <input type="radio" name="age" value="50"/>50代<br/>
+             
+        <label>普段使っているスマホは？</label><br/>
+        <input type="checkbox" name="os" value="iphoue"/>iPhone
+        <input type="checkbox" name="os" value="android"/>Android
+        <input type="checkbox" name="os" value="ガラケー"/>ガラケー
+        <input type="checkbox" name="os" value="other"/>その他
+        
+    </form>
+    
+    <button id = "btn">実行</button>
+    
+    <script>
+        const btn = document.getElementById('btn');
+        
+        btn.addEventListener("click", () => {
+            const word = document.forms.myForm.myText.value;
+            
+            const word2 = document.forms.myForm.myText2.value;
+            
+            console.log(word);
+            console.log(word2);
+            
+            const age = document.forms.myForm.age.value;
+            console.log(age);
+            
+            const device= document.forms.myForm;
+            device.os.forEach( item => {
+              if(item.checked) console.log(item.value);  
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScriptの練習</title>
+  </head>
+  <body>
+    
+    
+    <script>
+      let myString　= `ユーザー名`;
+      
+      myString　=　`太郎`;
+      
+      console.log(`ようこそ` + myString + `さん`);
+      
+      const myNumber = 100;
+      
+      console.log(myNumber);
+      
+      const myName = `飯田`;
+      const myAge = 29;
+      
+      console.log(myName);
+      console.log(myAge);
+      
+      const cart =[`Kindle Fire HD 10`, 19980, 1];
+      
+      console.log('商品名：' + cart[0]);
+      console.log('価格：' + cart[1] + '円');
+      console.log('個数：' + cart[2]);
+      
+      cart.push(100);
+      
+      console.log(cart);
+      
+      console.log(cart[1]);
+      
+      console.log(cart.length);
+      
+      const cart2 =[
+            ['Kindle Fire HD 10', 19980, 1],
+            ['プログラミングの本', 1500, 1],
+            ['ミネラルウォーター', 280, 3],
+            ['液晶テレビ24型', 35000, 1],
+            ['スマホケース', 1800, 2]
+        ];
+        
+      console.log(cart2.length);
+    
+      const janken = [`グー`,`チョキ`,`パー`];
+      
+      const rnd = Math.floor(Math.random() * janken.length);
+      
+      console.log(janken[rnd]);
+      
+      const userID =['user34','','user18','','user55','user38'];
+      
+      const result =userID.filter( element =>{
+          return element !== '';
+      })
+      
+      console.log(result);
+      
+      const myNumber2 = ['田中太郎','佐藤一朗','山田次郎'];
+      
+      const result2 =myNumber2.map(element =>{
+          return element + 'さん';
+      })
+      
+      console.log(result2);
+      
+      const user =['田中太郎','佐藤一朗','山田次郎','伊藤花子'];
+      
+      user.forEach(element =>{
+          console.log(element);
+      })
+      
+      const omikuzi =['大吉','小吉','吉','凶'];
+      const kuzi = Math.floor(Math.random() * omikuzi.length);
+      console.log(omikuzi[kuzi]);
+      
+      const user4=['田中三郎','佐藤一朗','山田次郎','山田三郎','伊藤花子'];
+        user4.forEach(name =>{
+            if(name === '山田三郎'){
+             console.log('山田三郎さんはいます');   
+            }else if(name === '山田花子'){
+             console.log('山田花子さんはいます');
+            }else if(name ==='田中三郎'){
+             console.log('田中三郎さんはいます');
+            }else{
+             console.log('該当するユーザーはいません');
+            }
+        })
+        
+        const user2=['A','B','C','D','E'];
+        user2.forEach(name2 =>{
+            if(name2 ==='A'){
+             console.log('存在します');
+            }
+        user2.forEach(name2 =>{
+            name2 === 'A' ? console.log('存在します') : false ;
+            })
+        })
+        
+        console.log('' ? true : false);
+        console.log(0 ? true : false);
+        console.log(NaN ? true : false);
+        console.log(null ? true : false);
+        console.log(undefined ? true : false);
+        
+        const user3=['田中太郎','佐藤一朗','山田次郎','伊藤三郎'];
+        user3.forEach(name3 => {
+            switch(name3){
+                case '田中太郎':
+                    console.log(name3 + 'は営業部　第一課です');
+                    break;
+                    
+                case '山田次郎':
+                    console.log(name3 + 'は製造部　生産管理課です');
+                    break;
+                    
+                default:
+                    console.log(name3 + 'は該当データがありません');
+            }
+        })
+        
+        let state = true;
+        
+        while(state){
+          let number =Math.floor(Math.random() * 10);
+          if(number === 3) state = false;
+          console.log(number);
+        }
+        
+        for (let i =0; i<7; i=i+2){
+            console.log(i);
+        }
+        
+        for (let i=0; i<10; i++){
+           if(i % 2 === 0) continue;
+           
+           console.log(i);
+        }
+        //関数宣言の場合
+        function myFunc1(){
+            console.log('これは関数宣言です');
+        }
+        myFunc1(); //関数の実行
+        
+        // 関数式の場合
+        const myFunc2 = () => {
+            console.log('これは関数式です');
+        }
+        myFunc2(); //関数の実行
+        
+        const myFunc3 = (keyword) =>{
+            console.log('指定した文字は、「' + keyword +'」ですよね？');
+        }
+        
+        myFunc3('プログラミング');
+        
+        const products = ['テレビ','冷蔵庫','机','スマホ','本棚','椅子','テーブル'];
+        
+        const result3 = products.filter( (item) => item === 'スマホ');
+        
+        console.log(result3);
+        
+        const products2 = ['テレビ','冷蔵庫','机','スマホ','本棚','椅子','テーブル'];
+        
+        const search = (items, target) => {
+            
+            const result4 = items.filter(item => item === target);
+            
+            if(result4.length){
+                console.log('商品が見つかりました');
+            }else {
+                console.log('お探しの商品は見つかりませんでした');
+            }
+        }
+        
+        search(products2, 'スマホ');
+        
+        const myNumber3 = 10;
+        
+        const getDouble = (number2) => {
+            return number2 * 2;
+        }
+        
+        console.log(getDouble(myNumber3));
+        
+        const user5 = {
+            
+            name4: '太郎',
+            age: 30,
+            area: '東京都'
+        };
+        
+        user5.name4 = '山田太郎';
+        user5.hobby = '映画鑑賞';
+        delete user5.area;
+        
+        console.log(user5);
+        
+        const user6 = {
+            name5: '山田太郎',
+            age: 30,
+            
+            getName: function(){
+                console.log(this.name5);
+            }
+            
+        }
+        
+        user6.getName();
+        
+        const obj = {
+            
+            getThis1: function() { return this},
+            
+            getThis2: () => this
+        };
+        
+        console.log(obj.getThis1());
+        console.log(obj.getThis2());
+        
+        class Animal {
+            constructor(name, age, type){
+                
+                this.name = name;
+                this.age = age;
+                this.type = type;
+            }
+        }
+        
+        const dog = new Animal('犬', 10, 'チワワ');
+        
+        console.log(dog);
+        
+        class Animal2 {
+            constructor(name6) {
+                this.name6 = name6;
+            }
+            
+            getName( ){
+                return this.name6;
+            }
+        }
+        
+        const dogs = new Animal2 ('犬');
+        
+        console.log(dogs.getName());
+        
+        const cat = new Animal2 ('猫');
+        const bird = new Animal2 ('鳥');
+        
+        console.log(cat.getName());
+        console.log(bird.getName());
+        
+        class Character {
+            constructor(name7, hp){
+                this.name7 = name7;
+                this.hp = hp;
+            }
+            
+            attack(){
+                console.log(this.name7 + 'の攻撃');
+            }
+        }
+        
+        class Hero extends Character{
+            
+            constructor(name7, hp, exp){
+             
+            super(name7, hp);
+            this.exp = exp ;  
+            
+            }
+        }
+        
+        class Enemy extends Character {
+            
+            dropItem(){}
+            
+            getPoint(){}
+        }
+        
+        const hero = new Hero('主人公', 100 , 50);
+        const enemy = new Enemy('敵', 10);
+        
+        hero.attack();
+        enemy.attack();
+        console.log(hero);
+        
+    </script>
+  </body>
+</html>

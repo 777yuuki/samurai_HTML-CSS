@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        const toki=['昨日','今日','明日'];
+        console.log(toki[2]);
+        
+        const zikan=Math.floor(Math.random() * toki.length);
+        console.log(toki[zikan]);
+        
+        const arry=['a','b'];
+        arry.forEach(element => {
+            console.log(element);
+        })
+        
+        for(i=0; i<10; i++){
+            if(i % 2 === 0)continue;
+            console.log(i);
+        }
+        
+        const myNumber = 10;
+
+        const getDouble = (number) => {
+           return number*2;
+        }
+        
+        console.log(getDouble(myNumber));
+    </script>
+    
+</body>
+</html>

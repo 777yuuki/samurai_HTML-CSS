@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript テスト</title>
+</head>
+<body>
+    <!--Q1 該当するデータから「1」を取り出してください-->
+    <!-- 'Kindle Fire HD 10', 19980, 1-->
+    
+    <script>
+        const name = ['Kindle Fire HD 10', 19980, 1];
+        console.log(name[2]);
+    </script>
+    
+     <!-- Q2 0 〜 100の範囲で乱数を生成-->
+     
+     <script>
+         const numbers = Math.floor(Math.random() *101 );
+         console.log(numbers);
+     </script>
+     
+     <!-- Q3 名前を格納している配列を元に、名前の末尾に「さん」を追記した新しい配列を作ってみましょう-->
+     <!-- const nameList = ['大谷翔平','鈴木イチロー','松尾芭蕉']; -->
+     
+     <script>
+         const nameList = ['大谷翔平','鈴木イチロー','松尾芭蕉']; 
+         const names = nameList.map(e => {
+             
+             return e + "さん";
+         })
+         
+         console.log(names);
+     </script>
+     
+     <!--Q4 map関数を使って、[1,2,3,4,5,6]を二乗した配列を作成してください-->
+     <script>
+         const numbers2=[1,2,3,4,5,6];
+         const numbers3 = numbers2.map( e => {
+             
+             return e*e;
+         })
+         
+         console.log(numbers3);
+     </script>>
+     
+     <!--Q5 foreach文を使って、[1,2,3,4,5,6]を二乗した配列を作成してください-->
+     
+     <script>
+         const number4 = [1,2,3,4,5,6];
+         number4.forEach( e => {
+             
+             console.log(e*e);
+         })
+     </script>
+     
+     <!--Q6 for文を使って、[1,2,3,4,5,6]を二乗した配列を作成してください-->
+     
+     <script>
+        const newList = [];
+
+         for ( let i =1; i <7; i++){
+             newList[i] = [i*i];
+         }
+         
+         console.log(newList);
+         
+     </script>
+</body>
+</html>
